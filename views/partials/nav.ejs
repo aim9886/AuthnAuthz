@@ -1,0 +1,16 @@
+<nav>
+    <div>
+        <h1>
+            <a href="/">HOME</a>
+        </h1>
+    </div>
+    <ul>
+        <% if(user) { %>
+            <li>Welcome, <%= user.email %></li>
+           <li><a href="/logout">Logout</a></li>
+        <%} else { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+        <% } %>
+    </ul>
+</nav>
